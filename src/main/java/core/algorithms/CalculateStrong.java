@@ -20,7 +20,8 @@ class CalculateStrong {
         if (number == 0) {
             return result;
         }
-        else for (int i = 2; i <= number; i++) {
+
+        for (int i = 2; i <= number; i++) {
             result = result * i;
         }
 
