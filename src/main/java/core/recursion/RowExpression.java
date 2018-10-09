@@ -16,6 +16,6 @@ class RowExpression {
         if (n == 1) return 1;
         if (n == 2) return 0.5;
 
-        return -(row(n-1)) * row(n-2);
+        return -row(n-1) * row(n-2);
     }
 }
