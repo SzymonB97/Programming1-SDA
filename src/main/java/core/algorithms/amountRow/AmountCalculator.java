@@ -1,4 +1,4 @@
-package core.algorithms.AmountRow;
+package core.algorithms.amountRow;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 class AmountCalculator {
 
-    final static String FILE_PATH = "D:\\Projekty Java\\programming1\\src\\main\\java\\core\\algorithms\\AmountRow\\data";
+    final static String FILE_PATH = "D:\\Projekty Java\\programming1\\src\\main\\java\\core\\algorithms\\amountRow\\data";
 
     public static void main(String[] args) {
         calculate();
