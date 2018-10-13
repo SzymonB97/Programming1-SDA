@@ -4,7 +4,7 @@ Zad dodatkowe 1.Mamy dużo liczb od 1 do 10. Zliczamy ile jest różnych liczb (
 np. 1 2 6 7 3 2 3 4 6 8 5 3 2 1 1 1 1 1 1 2 2 3 5 6 5 5 5 5 5 5 5 5 5 1
 */
 
-package core.algorithms.additional1;
+package core.algorithms.additional;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 class UniqueNumbers {
 
-    final static String FILE_PATH = "D:\\Projekty Java\\programming1\\src\\main\\java\\core\\algorithms\\additional1\\numbers";
+    final static String FILE_PATH = "D:\\Projekty Java\\programming1\\src\\main\\java\\core\\algorithms\\additional\\numbers";
 
     public static void main(String[] args) {
 
