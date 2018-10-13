@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 class UniqueNumbers {
 
@@ -36,6 +37,11 @@ class UniqueNumbers {
             for (int i = 0; i < amount.length; i++) {
                 if (amount[i] != 0) unique++;
             }
+
+            //2 sposób (zamiast pętli for)
+            /*long res2 = IntStream.range(0, amount.length)
+                    .filter(t -> amount[t] != 0).count();
+            System.out.println(res2);*/
 
             System.out.println("Wystąpienia liczb: " + Arrays.toString(amount));
             System.out.println("Ilość liczb: " + unique);
