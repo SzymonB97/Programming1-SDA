@@ -1,6 +1,8 @@
 package core.algorithms.strings;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 class PatternOccurrances {
 
@@ -9,6 +11,26 @@ class PatternOccurrances {
         String text = "ala1ala ma kota, ala, ala";
         String pattern = "ala";
 
+        //nie wypisuje ostatniego wystąpienia
+        /*findPattern(list, text, pattern);
+        System.out.println(list);*/
+        System.out.println(findPatternV2(text, pattern));
+    }
+
+    private static List findPatternV2(String text, String pattern) {
+        int index = 0;
+        List result = new ArrayList();
+        do {
+            index = text.indexOf(pattern, index);
+            if (index == -1) break;
+            result.add(Arrays.asList(index, index + pattern.length() - 1));
+            index++;
+        } while (true);
+
+        return result;
+    }
+
+    private static void findPattern(ArrayList list, String text, String pattern) {
         if (text.contains(pattern)) {
             for (int i = 0; i < text.length(); i++) {
                 int index = text.indexOf(pattern, i);
@@ -21,6 +43,5 @@ class PatternOccurrances {
                 i += index;
             }
         }
-        System.out.println(list);
     }
 }
