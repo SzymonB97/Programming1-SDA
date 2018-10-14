@@ -2,7 +2,7 @@ package core.algorithms.strings;
 
 import java.util.ArrayList;
 
-class PatternInstances {
+class PatternOccurrances {
 
     public static void main(String[] args) {
         ArrayList list = new ArrayList();
