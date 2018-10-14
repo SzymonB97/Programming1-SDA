@@ -11,9 +11,10 @@ class CesarCode {
 
         final int shift = 3;
         String encriptedText = encrypt(plainText, shift);
-        String decryptedText = decrypt(plainText, shift);
+        String decryptedText = decrypt(encriptedText, shift);
 
         System.out.println("encriptedText: " + encriptedText);
+        System.out.println("decryptedText: " + decryptedText);
     }
 
     private static String getInputText() {
@@ -47,8 +48,30 @@ class CesarCode {
 
     }
 
+    private static char getEnShiftedChar(char cipherChar, int shift) {
+        int charValue = (int)cipherChar;
+
+        if(cipherChar == ' '){
+            return ' ';
+        }
+
+//        if (cipherChar <= 'A' + ALPHABET_LENTH - shift) {
+//            return (char) (charValue + shift);
+//        } else {
+//            return (char)((int)charValue - ALPHABET_LENTH + shift);
+//        }
+
+        return (char) (((charValue - shift - 'A') % ALPHABET_LENTH) + 'A');
+
+    }
+
     private static String decrypt(String text, int shift) {
-        return null;
+
+        String result = "";
+        for (int i = 0; i < text.length(); i++) {
+            result += getEnShiftedChar(text.charAt(i), shift);
+        }
+        return result;
     }
 
 }
