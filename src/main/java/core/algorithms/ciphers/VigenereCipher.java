@@ -14,9 +14,9 @@ class VigenereCipher {
 
         final String key = generateKey(plainText);
         generateMatrix();
-        printMatrix();
-        String result = encrypt(plainText, key);
-        System.out.println("\nEncrypted text: " + result);
+        //printMatrix();
+        String encryptedText = encrypt(plainText, key);
+        System.out.println("\nEncrypted text: " + encryptedText);
     }
 
     private static String encrypt(String plainText, String key) {
