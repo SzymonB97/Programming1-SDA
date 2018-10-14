@@ -9,7 +9,7 @@ class PrintFigures {
         //dzięki '?' nie określamy z góry typu/rodzaju więc możemy go zmieniać na inne
         FigureBox<?> someFigure = new FigureBox<>(new Square());
 
-        System.out.println(circle.getElement().getName());
-        System.out.println(square.getElement().getName());
+        System.out.println(circle);
+        System.out.println(square);
     }
 }

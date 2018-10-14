@@ -16,4 +16,9 @@ class FigureBox<E extends Figure> {
     public void setElement(E element) {
         this.element = element;
     }
+
+    @Override
+    public String toString() {
+        return getElement().getName();
+    }
 }
