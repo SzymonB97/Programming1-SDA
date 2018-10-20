@@ -2,7 +2,7 @@ package core.dataStructures.generic.stacksAndQueues;
 
 import java.util.LinkedList;
 
-class CustomQueue<T> {
+public class CustomQueue<T> {
 
     private LinkedList<T> elements = new LinkedList<>();
 
