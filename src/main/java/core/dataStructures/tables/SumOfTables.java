@@ -39,10 +39,12 @@ class SumOfTables {
             tab[i] = table1[i] + table2[i];
         }
 
-        for (int i = biggerLength - smallerLength + 1; i < tab.length; i++) {
-            if (biggerLength == table1.length) {
-                tab[i] = table1[i];
-            } else tab[i] = table2[i];
+        if (biggerLength != smallerLength) {
+            for (int i = smallerLength; i < tab.length; i++) {
+                if (biggerLength == table1.length) {
+                    tab[i] = table1[i];
+                } else tab[i] = table2[i];
+            }
         }
 
         return tab;
