@@ -1,6 +1,6 @@
 /*Program liczący n-ty wyraz ciągu Fibonnaciego*/
 
-package core.recursion;
+package core.algorithms.recursion;
 
 import java.util.Scanner;
 

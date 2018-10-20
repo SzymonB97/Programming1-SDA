@@ -1,4 +1,4 @@
-package core.generic.figures;
+package core.dataStructures.generic.figures;
 
 //"mówimy", że nasza klasa generyczna będzie pracować tylko na klasach które implementują Figure
 class FigureBox<E extends Figure> {

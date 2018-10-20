@@ -1,4 +1,4 @@
-package core.generic.figures;
+package core.dataStructures.generic.figures;
 
 class PrintFigures {
 
