@@ -6,18 +6,22 @@ class CustomStack<T> {
 
     private LinkedList<T> elements = new LinkedList<>();
 
+    //dodanie elementu
     public void push(T element) {
         elements.addFirst(element);
     }
 
+    //wypisanie i usunięcie elementu ze stosu
     public T pop() {
         return elements.removeFirst();
     }
 
+    //wypisanie elementu
     public T pick() {
         return elements.getFirst();
     }
 
+    //wypisanie wszystkich elementów i wyczyszczenie stosu
     public void clear() {
         while (!elements.isEmpty()) {
             T element = elements.pop();
@@ -25,10 +29,12 @@ class CustomStack<T> {
         }
     }
 
+    //sprawdzenie czy stos jest pusty
     public boolean isEmpty() {
         return elements.isEmpty();
     }
 
+    //podanie rozmiaru stosu
     public int size() {
         return elements.size();
     }
