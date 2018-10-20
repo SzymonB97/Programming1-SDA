@@ -1,4 +1,4 @@
-package core.dataStructures.generic.stacks;
+package core.dataStructures.generic.stacksAndQueues;
 
 import java.util.LinkedList;
 
