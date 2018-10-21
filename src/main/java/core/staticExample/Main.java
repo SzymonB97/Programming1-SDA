@@ -15,12 +15,15 @@ class Main {
 
         printText(object1);
 
+        StaticTest.VALUE = 10;
+
         StaticTest object2 = new StaticTest();
         object2.setFirstName("Janek");
         object2.setLastName("Kowal");
         object2.setAge(18);
 
         printText(object2);
+        printText(object1);
     }
 
     private static void printText(StaticTest object) {
