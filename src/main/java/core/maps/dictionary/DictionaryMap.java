@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 class DictionaryMap {
 
@@ -15,13 +16,14 @@ class DictionaryMap {
 
         Map<String, String> dictionary = readWords();
 
-        String result = translate(word, dictionary);
+        String translate = translate(word, dictionary);
 
-        System.out.println(result);
+        System.out.println(translate);
+        System.out.println(dictionary);
     }
 
     private static String translate(String word, Map<String, String> dictionary) {
-        return dictionary.get(word);
+        return dictionary.getOrDefault(word, "nie ma takiego słowa w słowniku");
     }
 
     private static Map<String, String> readWords() {
