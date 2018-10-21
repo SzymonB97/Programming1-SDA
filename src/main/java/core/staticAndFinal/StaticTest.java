@@ -1,4 +1,4 @@
-package core.staticExample;
+package core.staticAndFinal;
 
 import lombok.Getter;
 import lombok.Setter;
