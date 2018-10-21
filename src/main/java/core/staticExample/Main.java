@@ -24,6 +24,16 @@ class Main {
 
         printText(object2);
         printText(object1);
+
+        System.out.println("-------------");
+        object1.test();
+        object2.test();
+
+        System.out.println("-------------");
+        StaticTest.testStatic();
+        //nie zalecane
+        object1.testStatic();
+        object2.testStatic();
     }
 
     private static void printText(StaticTest object) {

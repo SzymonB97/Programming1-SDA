@@ -14,10 +14,12 @@ class StaticTest {
     private Integer age;
 
     public void test() {
-        System.out.println("Test");
+        System.out.println("Test: " + firstName);
     }
 
     public static void testStatic() {
-        System.out.println("Test static");
+        //nie możemy dodać firstName ponieważ metoda odwołuje się do całej klasy
+        //musielibyśmy utworzyć nowy obiekt w metodzie
+        System.out.println("Test static: " /*+firstName*/);
     }
 }
