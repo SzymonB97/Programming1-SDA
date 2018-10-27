@@ -24,8 +24,9 @@ class CountingSort {
         }
 
         int counter = 0;
+        //dwie pętle ale złożoność liniowa
         for (int i = 0; i < occurrencesTab.length; i++) {
-            for (int k = 0; k < occurrencesTab[i]; k++) {
+            for (int j = 0; j < occurrencesTab[i]; j++) {
                 numbers[counter++] = i;
             }
         }
