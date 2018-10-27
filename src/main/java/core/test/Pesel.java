@@ -27,6 +27,7 @@ class Pesel {
                 k = 1;
                 multiplier = multiplier + (int) Math.pow(2, k);
             } else multiplier = multiplier + (int) Math.pow(2, k);
+
             if (multiplier > 9 || i == pesel.length() - 1) {
                 k = 0;
                 multiplier = k + (int) Math.pow(2, k);
