@@ -1,9 +1,6 @@
 package core.sort;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 class CollectionsSort {
 
@@ -19,13 +16,27 @@ class CollectionsSort {
     }
 
     private static List<Integer> sortNumbers(List<Integer> tab) {
-        Collections.sort(tab);
+        Collections.sort(tab, (o1, o2) -> {
+            //sortowanie z ustawieniem na początku liczb parzystych a potem nieparzystych (rosnąco)
+            // -1 odpowiada za o1, a 1 odpowiada za o2
+            if (o1 % 2 == 0 && o2 % 2 == 0) {
+                o1.compareTo(o2);
+            } else if (o1 % 2 == 0) {
+                return -1;
+            } else if (o2 % 2 == 0) {
+                return 1;
+            }
+
+            if (o1 < o2) {
+                return -1;
+            } else return 1;
+        });
 
         return tab;
     }
 
     private static List<Integer> generateNumbers(Random random, List<Integer> numbers) {
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 10; i++) {
             numbers.add(random.nextInt(100));
         }
 
