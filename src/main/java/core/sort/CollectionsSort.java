@@ -19,7 +19,10 @@ class CollectionsSort {
         Collections.sort(tab, (o1, o2) -> {
             //sortowanie z ustawieniem na początku liczb parzystych a potem nieparzystych (rosnąco)
             // -1 odpowiada za o1, a 1 odpowiada za o2
-            if (o1 % 2 == 0 && o2 % 2 == 0) {
+
+            //dzięki takiemu warunkowi mamy od razu porównanie wielkości liczby
+            // gdy obie są nieprzyste lub gdy obie są parzyste
+            if (o1 % 2 == o2 % 2) {
                 o1.compareTo(o2);
             } else if (o1 % 2 == 0) {
                 return -1;
@@ -27,9 +30,7 @@ class CollectionsSort {
                 return 1;
             }
 
-            if (o1 < o2) {
-                return -1;
-            } else return 1;
+            return 0;
         });
 
         return tab;
