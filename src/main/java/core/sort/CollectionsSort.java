@@ -23,7 +23,7 @@ class CollectionsSort {
             //dzięki takiemu warunkowi mamy od razu porównanie wielkości liczby
             // gdy obie są nieprzyste lub gdy obie są parzyste
             if (o1 % 2 == o2 % 2) {
-                o1.compareTo(o2);
+                return o1.compareTo(o2);
             } else if (o1 % 2 == 0) {
                 return -1;
             } else if (o2 % 2 == 0) {
